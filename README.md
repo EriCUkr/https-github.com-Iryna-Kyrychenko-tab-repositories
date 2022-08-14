@@ -8,3 +8,5 @@
 
 >//child::div/a
 
+> //div[@class='MuiCardContent-root']
+
