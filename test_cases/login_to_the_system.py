@@ -1,12 +1,14 @@
 import os
+import time
 import unittest
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+
+from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 class TestLoginPage(unittest.TestCase):
-
 
     @classmethod
     def setUp(self):
@@ -14,18 +16,16 @@ class TestLoginPage(unittest.TestCase):
         self.driver_service = Service(executable_path=DRIVER_PATH)
         # self.driver_service = Service(executable_path=ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=self.driver_service)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en/')
+        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_log_in_to_the_sistem(self):
-        user_login = TestLoginPage(self.driver)
-        user_login.type_in_email('user08@getnada.com')
-        user_login.type_in_passvord('Test-1234')
+        user_login = LoginPage(self.driver)
+        user_login.type_in_email('user07@getnada.com')
+        user_login.type_in_password('Test-1234')
         user_login.click_on_the_sing_in_button()
-
-
-
+        time.slip(5)
 
     @classmethod
     def tearDown(self):
