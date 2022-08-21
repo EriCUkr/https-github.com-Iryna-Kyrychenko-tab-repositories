@@ -20,12 +20,12 @@ class TestLoginPage(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    def test_log_in_to_the_sistem(self):
+    def test_log_in_to_the_system(self):
         user_login = LoginPage(self.driver)
-        user_login.type_in_email('user07@getnada.com')
-        user_login.type_in_password('Test-1234')
-        user_login.click_on_the_sing_in_button()
-        time.slip(5)
+        user_login.type_in_email("user07@getnada.com")
+        user_login.type_in_password("Test-1234")
+        user_login.click_on_the_sign_in_button()
+        time.sleep(5)
 
     @classmethod
     def tearDown(self):

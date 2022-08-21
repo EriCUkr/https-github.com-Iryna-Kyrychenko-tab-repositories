@@ -1,7 +1,10 @@
 from pages.base_page import BasePage
 
 
+import time
+
 class Dashoard(BasePage):
+
     button_players_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][1]"
     button_matches_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][2]"
     button_reports_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][3]"
