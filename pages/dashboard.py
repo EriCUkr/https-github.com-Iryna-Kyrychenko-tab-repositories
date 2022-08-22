@@ -1,10 +1,17 @@
+import time
+
 from pages.base_page import BasePage
 
 
-import time
+class Dashboard(BasePage):
+    expected_title = "Scouts panel"
+    dashboard_url = 'https://scouts-test.futbolkolektyw.pl'
 
-class Dashoard(BasePage):
+    def title_of_page(self):
+        time.sleep(4)
+        assert self.get_page_title(self.dashboard_url) == self.expected_title
 
+    '''
     button_players_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][1]"
     button_matches_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][2]"
     button_reports_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][3]"
@@ -16,3 +23,4 @@ class Dashoard(BasePage):
     window_shortcuts_xpath="//div[contains(@class,'12')][2]"
     window_activity_xpath="//div[contains(@class,'12')][3]"
     pass
+    '''
