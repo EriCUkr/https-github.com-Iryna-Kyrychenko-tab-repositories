@@ -25,7 +25,8 @@ class LoginPage(BasePage):
     def check_title_of_header(self):
         self.assert_element_text(self.driver, self.title_of_box_xpaht, self.header_of_box)
 
-
+    def check_assert_element_text(self, xpath=None):
+        self.assert_element_text(self.driver, self.xpath, self.assert_element_text)
 
     @classmethod
     def tearDown(self):

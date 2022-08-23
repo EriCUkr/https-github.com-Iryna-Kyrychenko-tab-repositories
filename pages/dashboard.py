@@ -1,5 +1,4 @@
 import time
-
 from pages.base_page import BasePage
 
 
@@ -10,6 +9,7 @@ class Dashboard(BasePage):
     def title_of_page(self):
         time.sleep(4)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
+
 
     '''
     button_players_count_xpath="//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-md-3'][1]"
