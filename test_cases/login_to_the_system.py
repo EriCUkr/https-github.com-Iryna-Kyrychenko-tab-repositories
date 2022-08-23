@@ -31,8 +31,6 @@ class TestLoginPage(unittest.TestCase):
         dashboard_page.title_of_page()
         time.sleep(5)
 
-    def check_test_element_text(self, driver, xpath, expected_text):
-        assert expected_text()
 
 
     @classmethod
